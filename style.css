@@ -1,0 +1,151 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 10%;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    text-align: left;
+    gap: 0;
+}
+
+.hero-text h1 {
+    font-size: 3.8rem;
+    margin: 0;
+}
+
+.hero-text h2 {
+    font-size: 2.3rem;
+    font-weight: 200;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin: 2.0rem 0 1rem 0;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: auto;
+    max-width: 100%;
+}
+
+.hero-image img {
+    object-fit: contain;
+    max-height: 28rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.projects-button,
+.resume-button {
+    display: inline-block;
+    position: relative;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.projects-button {
+    flex: 2;
+}
+
+.resume-button {
+    flex: 1;
+}
+
+.projects-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            transparent 100%);
+    transform: skewX(-20deg);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: none;
+}
+
+.projects-button:hover::before {
+    animation: shine-projects 0.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    opacity: 1;
+}
+
+@keyframes shine-projects {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
+
+.resume-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            transparent 100%);
+    transform: skewX(-20deg);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: none;
+}
+
+.resume-button:hover::before {
+    animation: shine-resume 0.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    opacity: 1;
+}
+
+@keyframes shine-resume {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
