@@ -149,3 +149,46 @@ body {
         left: 125%;
     }
 }
+
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 2rem 1.5rem;
+
+    }
+
+    .hero-text {
+        align-items: center;
+    }
+
+    .hero-image {
+        max-width: 70%;
+        height: auto;
+        padding-top: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .projects-button,
+    .resume-button {
+        width: 100%;
+    }
+}
