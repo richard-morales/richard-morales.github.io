@@ -192,3 +192,96 @@ body {
         width: 100%;
     }
 }
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem 10%;
+    gap: 3rem;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-me {
+    flex: 1;
+    padding: 3rem 0;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.skills-group h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.skills-group ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+}
+
+.skills-group li {
+    background: #ccdbeb;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.skills-group li:hover {
+    transform: scale(1.15);
+}
+
+.about-extra {
+    flex: 1;
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-extra h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.2rem;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tech-icons img {
+    height: 5rem;
+    width: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tech-icons img:hover {
+    transform: scale(1.15);
+}
+
+.quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    max-width: 80%;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
