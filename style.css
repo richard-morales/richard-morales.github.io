@@ -391,3 +391,12 @@ body {
     color: #333;
     margin-bottom: 1rem;
 }
+
+.react-version {
+    background-color: #f0f4f8;
+    border-left: 4px solid #61dafb;
+}
+
+.react-version h4 {
+    color: #1a1f2b;
+}
