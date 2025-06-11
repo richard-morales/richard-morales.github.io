@@ -197,7 +197,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 4rem 10%;
+    padding: 1rem 10% 0;
     gap: 3rem;
 }
 
@@ -345,6 +345,7 @@ body {
 #projects {
     padding: 4rem 10%;
     background-color: #f7f7f7;
+    padding-top: 0;
 }
 
 #projects h2 {
@@ -399,4 +400,49 @@ body {
 
 .react-version h4 {
     color: #1a1f2b;
+}
+
+#contact {
+    background-color: #f7f7f7;
+    padding: 4rem 10%;
+    text-align: center;
+}
+
+.contact-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+#contact .message {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+#contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-credit {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+}
+
+#contact i {
+    margin-right: 0.5rem;
+    color: #007bff;
 }
