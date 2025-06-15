@@ -50,6 +50,8 @@ body {
 .hero-image img {
     object-fit: contain;
     max-height: 28rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .button-group {
