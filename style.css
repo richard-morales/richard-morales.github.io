@@ -37,7 +37,7 @@ body {
 .navbar a {
     color: #007bff;
     text-decoration: none;
-    transition: color 0.08s ease;
+    transition: color 0.01s ease;
 }
 
 .navbar a:hover {
@@ -485,10 +485,10 @@ body {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 0.6rem 1rem;
+    padding: 0.78rem 1rem;
     border-radius: 50%;
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 500;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: background-color 0.08 ease;
@@ -496,8 +496,33 @@ body {
     display: none;
 }
 
+#backToTop i {
+    vertical-align: middle;
+    color: white;
+}
+
 #backToTop:hover {
     background-color: #00458f;
+}
+
+/* Back To Top Button Animation */
+
+#backToTop.show {
+    animation: bounce 0.4s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* Media Queries */
