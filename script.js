@@ -283,3 +283,15 @@ toggleBtn.addEventListener("click", () => {
         : '<i class="fa-solid fa-globe"></i> <span class="active-lang"> ES </span> | EN';
 
 });
+
+// Hamburger Menu
+window.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+    }
+});
