@@ -286,8 +286,8 @@ toggleBtn.addEventListener("click", () => {
 
 // Hamburger Menu
 window.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".navbar-center");
 
     if (menuToggle && navLinks) {
         menuToggle.addEventListener("click", () => {
