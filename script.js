@@ -131,7 +131,7 @@ const translation = {
 
         //Footer / Contact
         contactTitle: "Contact",
-        contactParagraph: "I'm open to new opportunities — remote or onsite — and always happy to connect!",
+        contactParagraph: "I’m a frontend developer with a strong foundation in JavaScript and a good eye for clean, user-focused design. I enjoy building projects that are both functional and thoughtful. I'm open to new opportunities — remote or onsite — and always happy to connect with people building great things.",
         emailAddress: "Email: camylo182@gmail.com",
         gitHubProfile: "GitHub Profile: ",
         linkedInProfile: "LinkedIn Profile: ",
@@ -243,7 +243,7 @@ const translation = {
 
         //Footer / Contact
         contactTitle: "Contacto",
-        contactParagraph: "Siempre estoy abierto a nuevas oportunidades — remotas o presenciales — y encantado de conectar.",
+        contactParagraph: "Soy un desarrollador frontend con una sólida base en JavaScript y buen ojo para el diseño limpio y centrado en el usuario. Disfruto crear proyectos que sean funcionales y bien pensados. Estoy abierto a nuevas oportunidades — remotas o presenciales — y siempre dispuesto a conectar con personas que estén construyendo cosas geniales.",
         emailAddress: "Correo: camylo182@gmail.com",
         gitHubProfile: "Perfil de GitHub: ",
         linkedInProfile: "Perfil de LinkedIn: ",
