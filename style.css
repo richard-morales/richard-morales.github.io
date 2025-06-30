@@ -684,3 +684,35 @@ body {
     }
 
 }
+
+/* Unfinished / Comming Soon Projects */
+
+.coming-soon {
+    position: relative;
+    overflow: hidden;
+}
+
+.coming-soon::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 180%;
+    height: 100%;
+    background-color: rgba(0, 51, 102, 0.7);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-20deg);
+    pointer-events: none;
+    z-index: 2;
+    transition: text-shadow 0.3 ease, transform 0.3s ease;
+}
+
+.coming-soon:hover::before {
+    text-shadow: 0 0 10px #fff, 0 0 20px #007bff;
+    transform: rotate(-20deg) scale(1.05);
+}

@@ -104,6 +104,7 @@ const translation = {
         projectsSubtitle: "Here are some of the projects I have been working on recently",
 
         //Project Cards
+        comingSoon: "Coming Soon!",
         projectPortfolioTitle: "Responsive Portfolio Website",
         projectPortfolioDescription: "A personal portfolio website built from scratch using semantic HTML, responsive CSS, and JavaScript. It highlights my projects, skills, and professional background with a clean, user-friendly layout.",
         projectTodoTitle: "To-Do List App",
@@ -216,6 +217,7 @@ const translation = {
         projectsSubtitle: "Estos son algunos de los proyectos en los que he estado trabajando recientemente",
 
         //Project Cards
+        comingSoon: "¡Próximamente!",
         projectPortfolioTitle: "Portafolio Web Responsivo",
         projectPortfolioDescription: "Sitio web de portafolio creado con HTML semántico, CSS adaptable y JavaScript. Presenta mis proyectos, habilidades y experiencia en un diseño moderno, claro y fácil de usar.",
         projectTodoTitle: "Gestor de Tareas",
@@ -282,6 +284,11 @@ toggleBtn.addEventListener("click", () => {
         ? '<i class="fa-solid fa-globe"></i> <span class="active-lang"> EN </span> | ES'
         : '<i class="fa-solid fa-globe"></i> <span class="active-lang"> ES </span> | EN';
 
+    const comingSoonText = translation[currentLanguage]["comingSoon"];
+    document.querySelectorAll(".coming-soon").forEach((card) => {
+        card.setAttribute("data-label", comingSoonText);
+    });
+
 });
 
 // Hamburger Menu
@@ -295,3 +302,4 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
