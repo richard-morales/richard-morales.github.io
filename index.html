@@ -2,17 +2,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Charset & Viewport -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary SEO -->
+    <title>
+      Richard Morales — Full-Stack JavaScript Developer | Next.js • TypeScript •
+      Node.js • Prisma • Vercel
+    </title>
+    <meta
+      name="description"
+      content="Richard Morales — Full-Stack JavaScript Developer specialized in Next.js 15, TypeScript 5, Node.js, Tailwind CSS v4, Prisma 5 and PostgreSQL. Building modern, scalable web apps with clean UX and robust architecture."
+    />
+    <link rel="canonical" href="https://richard-morales.github.io/" />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -20,16 +36,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <link rel="icon" type="image/png" href="favicon.png" />
 
+    <!-- Open Graph (share cards) — unified to Full-Stack brand -->
     <meta
       property="og:title"
-      content="Richard Morales – Frontend Developer Portfolio"
+      content="Richard Morales — Full-Stack JavaScript Developer"
     />
     <meta
       property="og:description"
-      content="Explore my work as a JavaScript developer. Clean, responsive, modern websites built with passion."
+      content="Building modern, scalable web apps with Next.js 15, TypeScript 5, Node.js, Tailwind CSS v4, Prisma 5 and PostgreSQL. Performance, a11y, and clean UX."
     />
     <meta
       property="og:image"
@@ -40,14 +56,24 @@
   </head>
 
   <body>
-    <!-- Navigation -->
-    <header class="site-header">
-      <nav class="navbar">
-        <button class="menu-toggle">
-          <i class="fa fa-bars"></i>
+    <!-- Skip link for keyboard/screen reader users -->
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Site Header & Navigation -->
+    <header class="site-header" role="banner">
+      <nav class="navbar" aria-label="Primary">
+        <!-- Mobile menu button -->
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          aria-label="Toggle menu"
+        >
+          <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
 
-        <div class="navbar-center">
+        <!-- Centered nav links -->
+        <div id="nav-links" class="navbar-center">
           <a href="#about" data-i18n="navAbout">About</a>
           <a href="#projects" data-i18n="navProjects">Projects</a>
           <a href="#contact" data-i18n="navContact">Contact</a>
@@ -55,304 +81,432 @@
 
         <!-- Language Switch -->
         <div class="language-switch">
-          <button id="languageToggle">
-            <i class="fa-solid fa-globe"></i> <span>EN</span> | <span>ES</span>
+          <button id="languageToggle" aria-label="Toggle language">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <span>EN</span> | <span>ES</span>
           </button>
         </div>
       </nav>
     </header>
 
-    <!-- Hero Section (Intro) -->
-    <section id="hero">
-      <div class="hero-text">
-        <h1 data-i18n="heroTitle">Richard Morales</h1>
-        <h2 data-i18n="heroSubtitle">Frontend Developer</h2>
-        <p data-i18n="heroDescription">
-          I design and develop modern, responsive web interfaces using
-          JavaScript, HTML5, CSS3, Git, Node.js, and version control with
-          GitHub.
-        </p>
-        <div class="button-group">
-          <a href="#projects" class="projects-button" data-i18n="viewProjects"
-            >View Projects</a
-          >
-          <a
-            href="resume.pdf"
-            target="_blank"
-            class="resume-button"
-            data-i18n="resume"
-            >Resume</a
-          >
+    <main id="main">
+      <!-- Hero -->
+      <section id="hero" aria-labelledby="hero-title">
+        <div class="hero-text">
+          <h1 data-i18n="heroTitle">Richard Morales</h1>
+          <h2 data-i18n="heroSubtitle">Full-Stack JavaScript Developer</h2>
+          <p data-i18n="heroDescription">
+            I build production-ready web applications using Next.js 15,
+            TypeScript 5, Node.js, Tailwind CSS v4, Prisma 5 and PostgreSQL on
+            Vercel. I focus on performance, accessibility, and clean UX —
+            creating fast, scalable solutions that look and feel professional.
+          </p>
+          <div class="button-group">
+            <a href="#projects" class="projects-button" data-i18n="viewProjects"
+              >View Projects</a
+            >
+            <!-- NOTE: keep the link even if resume is not present; replace when ready -->
+            <a
+              href="resume.pdf"
+              target="_blank"
+              rel="noopener"
+              class="resume-button"
+              data-i18n="resume"
+              >Resume</a
+            >
+          </div>
         </div>
-      </div>
-      <div class="hero-image">
-        <img
-          src="richard-morales-fullstack-developer-photo.png"
-          alt="Profile photo of richard Morales, full-stack developer"
-        />
-      </div>
-    </section>
 
-    <!-- About Me Section -->
-    <section id="about">
-      <div class="about-me">
-        <h2 data-i18n="aboutMeTitle">About Me</h2>
-        <p data-i18n="aboutMeParagraph">
-          Hi, I'm Richard Morales, a front-end developer from Cali, Colombia,
-          passionate about building clean, responsive, and engaging web
-          interfaces. I work with HTML, CSS, JavaScript, and Git to bring
-          user-centered designs to life. <br /><br />
-          With a background in business, I bring a strategic mindset to
-          development, always thinking about usability, performance, and
-          real-world impact. I'm focused on creating high-quality digital
-          experiences and currently open to both remote and onsite opportunities
-          where I can contribute, grow, and build meaningful products.
-        </p>
-        <div class="skills-group">
-          <h3 data-i18n="coreSkills">Core Frontend Skills</h3>
-          <ul class="skills-list">
-            <li data-i18n="html5">HTML5</li>
-            <li data-i18n="css3">CSS3</li>
-            <li data-i18n="javascriptES6">JavaScript (ES6+)</li>
-            <li data-i18n="responsiveDesign">Responsive Design</li>
-            <li data-i18n="flexBoxGrid">Flexbox & Grid</li>
-            <li data-i18n="domManipulation">DOM Manipulation</li>
-            <li data-i18n="semanticHTML">Semantic HTML</li>
-          </ul>
+        <div class="hero-image">
+          <img
+            src="richard-morales-fullstack-developer-photo.png"
+            alt="Portrait of Richard Morales"
+          />
         </div>
-        <div class="skills-group">
-          <h3 data-i18n="devTools">Developer Tools</h3>
-          <ul class="skills-list">
-            <li data-i18n="gitGitHub">Git & GitHub</li>
-            <li data-i18n="commandLine">Command Line (CLI)</li>
-            <li data-i18n="visualStudioCode">Visual Studio Code</li>
-            <li data-i18n="liveServer">Live Server</li>
-          </ul>
+      </section>
+
+      <!-- About -->
+      <section id="about" aria-labelledby="about-title">
+        <div class="about-me">
+          <h2 id="about-title" data-i18n="aboutMeTitle">About Me</h2>
+          <!-- Text comes from i18n (script.js) -->
+          <p data-i18n="aboutMeParagraph"></p>
+
+          <!-- Frontend Development -->
+          <div class="skills-group">
+            <h3 data-i18n="coreSkills">Frontend Development</h3>
+            <ul class="skills-list">
+              <li data-i18n="html5">HTML5 &amp; Semantic Markup</li>
+              <li data-i18n="css3">CSS3 &amp; Responsive Layouts</li>
+              <li data-i18n="javascriptES6">JavaScript (ES6+)</li>
+              <li data-i18n="typescript">TypeScript</li>
+              <li data-i18n="nextjs">Next.js 15 (App Router)</li>
+              <li data-i18n="tailwind">Tailwind CSS v4</li>
+            </ul>
+          </div>
+
+          <!-- Backend & Database -->
+          <div class="skills-group">
+            <h3 data-i18n="backendSkills">Backend &amp; Database</h3>
+            <ul class="skills-list">
+              <li data-i18n="nodeJs">Node.js (Runtime)</li>
+              <li data-i18n="prisma">Prisma ORM 5</li>
+              <li data-i18n="postgresql">PostgreSQL (Neon / Supabase)</li>
+              <li data-i18n="nextAuth">NextAuth.js (Auth.js v5)</li>
+              <li data-i18n="restApis">REST APIs &amp; Server Actions</li>
+              <li data-i18n="pdfExcel">
+                PDF &amp; Excel generation (PDFKit, SheetJS)
+              </li>
+            </ul>
+          </div>
+
+          <!-- Developer Tools -->
+          <div class="skills-group">
+            <h3 data-i18n="devTools">Developer Tools</h3>
+            <ul class="skills-list">
+              <li data-i18n="gitGitHub">Git &amp; GitHub</li>
+              <li data-i18n="vercel">
+                Vercel (Deployment &amp; Edge Functions)
+              </li>
+              <li data-i18n="cli">Command Line (CLI)</li>
+              <li data-i18n="vsCode">Visual Studio Code</li>
+              <li data-i18n="eslint">ESLint &amp; Prettier</li>
+              <li data-i18n="figma">Figma (UI Collaboration)</li>
+            </ul>
+          </div>
+
+          <!-- Design & UI Thinking -->
+          <div class="skills-group">
+            <h3 data-i18n="designUiThinking">Design &amp; UI Thinking</h3>
+            <ul class="skills-list">
+              <li data-i18n="cleanUi">Clean, accessible interfaces</li>
+              <li data-i18n="mobileFirstDesign">
+                Mobile-first &amp; responsive design
+              </li>
+              <li data-i18n="designSystems">Design systems with shadcn/ui</li>
+              <li data-i18n="a11y">Accessibility (WCAG / a11y)</li>
+              <li data-i18n="uxOptimization">
+                UX optimization &amp; SEO best practices
+              </li>
+            </ul>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skills-group">
+            <h3 data-i18n="softSkills">Soft Skills</h3>
+            <ul class="skills-list">
+              <li data-i18n="problemSolving">Problem Solving</li>
+              <li data-i18n="creativeThinking">Creative Thinking</li>
+              <li data-i18n="teamCollaboration">Team Collaboration</li>
+              <li data-i18n="businessMindset">Business-Oriented Mindset</li>
+              <li data-i18n="bilingualCommunication">
+                Bilingual Communication (EN/ES)
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="skills-group">
-          <h3 data-i18n="designUiThinking">Design & UI Thinking</h3>
-          <ul class="skills-list">
-            <li data-i18n="mobileFirstDesign">Mobile-First Design</li>
-            <li data-i18n="cleanUiPrinciles">Clean UI Principles</li>
-            <li data-i18n="attentionToDetail">Attention to Detail</li>
-            <li data-i18n="layoutComposition">Layout Composition</li>
-            <li data-i18n="accessibility">Accessibility (a11y)</li>
-          </ul>
+
+        <div class="about-extra">
+          <h3 data-i18n="technologiesUsedTitle">Technologies I Use</h3>
+          <div class="tech-icons" aria-label="Technology logos">
+            <img src="icons/html5.svg" alt="HTML5" />
+            <img src="icons/css3.svg" alt="CSS3" />
+            <img src="icons/javascript.svg" alt="JavaScript" />
+            <img src="icons/git.svg" alt="Git" />
+            <img src="icons/vscode.svg" alt="Visual Studio Code" />
+          </div>
+
+          <p class="quote" data-i18n="inspirationalQuote">
+            If it doesn't look amazing and work smoothly, it's not finished yet.
+          </p>
+
+          <!-- Featured Projects -->
+          <section
+            id="featured-projects-container"
+            aria-labelledby="featured-title"
+          >
+            <h3 id="featured-title" class="sr-only">Featured Projects</h3>
+
+            <article class="featured-project">
+              <h4 data-i18n="featuredProjectOneTitle">
+                Tolaris Crown — Luxury Hotel Showcase (Full-Stack)
+              </h4>
+              <p data-i18n="featuredProjectOneDescription">
+                A cinematic hotel web experience built with Next.js 15,
+                TypeScript 5, Tailwind CSS v4, Prisma ORM and PostgreSQL.
+                Features hybrid SSG/SSR rendering, dynamic routing, SEO
+                optimization, and edge deployment on Vercel for lightning-fast
+                performance.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://tolaris-crown.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="liveDemo"
+                  >🔗 Live Demo</a
+                >
+                <a
+                  href="https://github.com/richard-morales/tolaris-crown"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="github"
+                  >💻 GitHub</a
+                >
+              </div>
+            </article>
+
+            <article class="featured-project">
+              <h4 data-i18n="featuredProjectTwoTitle">
+                Life Dashboard Web App
+              </h4>
+              <p data-i18n="featuredProjectTwoDescription">
+                A complete productivity dashboard built with HTML, CSS, and
+                vanilla JavaScript. Includes six interactive tools — Task
+                Manager, Budget Tracker, Weekly Goals, Habit Tracker, Progress
+                Tracker, and Notes — all with data persistence via localStorage.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://richard-morales.github.io/life-dashboard/"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="liveDemo"
+                  >🔗 Live Demo</a
+                >
+                <a
+                  href="https://github.com/richard-morales/life-dashboard"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="github"
+                  >💻 GitHub</a
+                >
+              </div>
+            </article>
+          </section>
+
+          <div class="about-extra-video">
+            <iframe
+              width="100%"
+              height="315"
+              src="https://www.youtube.com/embed/JKAmquns3Iw"
+              title="Introductory Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
-        <div class="skills-group">
-          <h3 data-i18n="softSkills">Soft Skills</h3>
-          <ul class="skills-list">
-            <li data-i18n="problemSolving">Problem Solving</li>
-            <li data-i18n="creativeThinking">Creative Thinking</li>
-            <li data-i18n="teamCollaboration">Team Collaboration</li>
-            <li data-i18n="businessOrientedMindset">
-              Business-Oriented Mindset
-            </li>
-            <li data-i18n="bilingualCommunication">
-              Bilingual Communication (English + Spanish)
-            </li>
-          </ul>
-        </div>
-        <div class="skills-group">
-          <h3 data-i18n="inProgress">In Progress / Learning Now</h3>
-          <ul class="skills-list">
-            <li data-i18n="nodeJs">Node.js</li>
-            <li data-i18n="expressJs">Express.js</li>
-            <li data-i18n="restApis">REST APIs</li>
-            <li data-i18n="mongoDB">MongoDB</li>
-            <li data-i18n="fullStackDevelopment">Full-Stack Development</li>
-          </ul>
-        </div>
-      </div>
-      <div class="about-extra">
-        <h3 data-i18n="technologiesUsedTitle">Technologies I Use</h3>
-        <div class="tech-icons">
-          <img src="icons/html5.svg" alt="HTML5 logo" />
-          <img src="icons/css3.svg" alt="CSS3 logo" />
-          <img src="icons/javascript.svg" alt="JavaScript logo" />
-          <img src="icons/git.svg" alt="Git logo" />
-          <img src="icons/vscode.svg" alt="Visual Studio Code logo" />
-        </div>
-        <p class="quote" data-i18n="inspirationalQuote">
-          If it doesn't look amazing and work smoothly, it's not finished yet.
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title" data-i18n="projectsTitle">Projects</h2>
+        <p class="section-description" data-i18n="projectsSubtitle">
+          Here are some of the projects I have been working on recently
         </p>
 
-        <!-- Featured Projects (Right column of About section) -->
-        <section id="featured-projects-container">
-          <div class="featured-project">
-            <h4 data-i18n="featuredPorfolioTitle">My Porfolio Website</h4>
-            <p data-i18n="featuredPortfolioDescription">
-              A responsive and bilingual personal portfolio built with HTML,
-              CSS, and vanilla JavaScript. It highlights my projects, skills,
-              and experience with a clean layout and interactive features that
-              adapt across devices.
+        <div class="projects-grid">
+          <!-- Card 1: Tolaris Crown -->
+          <article class="project-card">
+            <figure class="project-media">
+              <img
+                src="images/tolaris-crown.png"
+                alt="Screenshot of Tolaris Crown hotel showcase"
+                loading="lazy"
+                width="1200"
+                height="675"
+              />
+            </figure>
+
+            <h4 data-i18n="projectTolarisTitle">
+              Tolaris Crown — Full-Stack Hotel Showcase
+            </h4>
+            <p data-i18n="projectTolarisDescription">
+              A production-style luxury hotel platform built with Next.js 15,
+              TypeScript, Tailwind, Prisma, and Vercel. Hybrid rendering
+              (SSG/SSR), API routes, auth-ready architecture, edge-optimized
+              deployment, and SEO-friendly design.
             </p>
             <div class="project-links">
-              <a href="#" target="_blank" data-i18n="liveDemo">🔗 Live Demo</a>
               <a
-                href="https://github.com/richard-morales/richard-morales.github.io"
+                href="https://tolaris-crown.vercel.app/"
                 target="_blank"
+                rel="noopener"
+                data-i18n="liveDemo"
+                >🔗 Live Demo</a
+              >
+              <a
+                href="https://github.com/richard-morales/tolaris-crown"
+                target="_blank"
+                rel="noopener"
                 data-i18n="github"
                 >💻 GitHub</a
               >
             </div>
-          </div>
-          <div class="featured-project">
-            <h4 data-i18n="featuredLifeDashboardTitle">
+          </article>
+
+          <!-- Card 2: Frontera Desk (In Progress) -->
+          <article class="project-card coming-soon" data-label="Coming Soon!">
+            <figure class="project-media">
+              <img
+                src="images/preview.png"
+                alt="Frontera Desk — multi-tenant business control desk screenshot placeholder"
+                loading="lazy"
+                width="1200"
+                height="675"
+              />
+            </figure>
+
+            <h4 data-i18n="projectFronteraTitle">
+              Frontera Desk — Business Control Desk
+            </h4>
+            <p data-i18n="projectFronteraDescription">
+              Multi-tenant platform for small businesses to manage sales,
+              inventory, customers, and profits from a single dashboard. POS,
+              KPIs, stock control, roles, reports (PDF/Excel), RLS, and PWA
+              offline support. Built with Next.js, TypeScript, Prisma, and
+              PostgreSQL.
+            </p>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener" data-i18n="liveDemo"
+                >🔗 Live Demo</a
+              >
+              <a href="#" target="_blank" rel="noopener" data-i18n="github"
+                >💻 GitHub</a
+              >
+            </div>
+          </article>
+
+          <!-- Card 3: Life Dashboard -->
+          <article class="project-card">
+            <figure class="project-media">
+              <img
+                src="images/life-dashboard.png"
+                alt="Screenshot of Life Dashboard App"
+                loading="lazy"
+                width="1200"
+                height="675"
+              />
+            </figure>
+
+            <h4 data-i18n="projectLifeDashboardTitle">
               Life Dashboard Web App
             </h4>
-            <p data-i18n="featuredLifeDashboardDescription">
-              A complete productivity dashboard built with HTML, CSS, and
-              vanilla JavaScript. Includes six interactive tools — Task Manager,
-              Budget Tracker, Weekly Goals, Habit Tracker, Progress Tracker, and
-              Notes — all with data persistence via localStorage.
+            <p data-i18n="projectLifeDashboardDescription">
+              A modular productivity application built with HTML, CSS, and
+              JavaScript. It features six interactive tools—tasks, goals, notes,
+              habits, progress, and budget—designed to help organize daily life
+              in one clean, user-friendly interface.
             </p>
             <div class="project-links">
               <a
                 href="https://richard-morales.github.io/life-dashboard/"
                 target="_blank"
+                rel="noopener"
                 data-i18n="liveDemo"
                 >🔗 Live Demo</a
               >
               <a
                 href="https://github.com/richard-morales/life-dashboard"
                 target="_blank"
+                rel="noopener"
                 data-i18n="github"
                 >💻 GitHub</a
               >
             </div>
-          </div>
-        </section>
+          </article>
 
-        <div class="about-extra-video">
-          <iframe
-            width="100%"
-            height="315px"
-            src="https://www.youtube.com/embed/JKAmquns3Iw"
-            title="Introductory Video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <!-- Card 4: Portfolio -->
+          <article class="project-card">
+            <figure class="project-media">
+              <img
+                src="images/portfolio.png"
+                alt="Screenshot of Portfolio Website"
+                loading="lazy"
+                width="1200"
+                height="675"
+              />
+            </figure>
+
+            <h4 data-i18n="projectPortfolioTitle">
+              Responsive Portfolio Website
+            </h4>
+            <p data-i18n="projectPortfolioDescription">
+              A personal portfolio website built from scratch using semantic
+              HTML, responsive CSS, and JavaScript. It highlights my projects,
+              skills, and professional background with a clean, user-friendly
+              layout.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://richard-morales.github.io/"
+                target="_blank"
+                rel="noopener"
+                data-i18n="liveDemo"
+                >🔗 Live Demo</a
+              >
+              <a
+                href="https://github.com/richard-morales/richard-morales.github.io"
+                target="_blank"
+                rel="noopener"
+                data-i18n="github"
+                >💻 GitHub</a
+              >
+            </div>
+          </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Project Cards Section -->
-    <section id="projects">
-      <h2 data-i18n="projectsTitle">Projects</h2>
-      <p class="section-description" data-i18n="projectsSubtitle">
-        Here are some of the projects I have been working on recently
-      </p>
+      <!-- Contact -->
+      <section id="contact" aria-labelledby="contact-title">
+        <div class="contact-wrapper">
+          <h2 id="contact-title" data-i18n="contactTitle">Contact</h2>
 
-      <div class="projects-grid">
-        <div class="project-card">
-          <h4 data-i18n="projectPortfolioTitle">
-            Responsive Portfolio Website
-          </h4>
-          <p data-i18n="projectPortfolioDescription">
-            A personal portfolio website built from scratch using semantic HTML,
-            responsive CSS, and JavaScript. It highlights my projects, skills,
-            and professional background with a clean, user-friendly layout.
+          <p class="message" data-i18n="contactParagraph">
+            I’m a frontend developer with a strong foundation in JavaScript and
+            a good eye for clean, user-focused design. I enjoy building projects
+            that are both functional and thoughtful. I'm open to new
+            opportunities — remote or onsite — and always happy to connect with
+            people building great things.
           </p>
-          <div class="project-links">
-            <a
-              href="https://richard-morales.github.io/"
-              target="_blank"
-              data-i18n=""
-              >🔗 Live Demo</a
-            >
-            <a
-              href="https://github.com/richard-morales/richard-morales.github.io"
-              target="_blank"
-              data-i18n=""
-              >💻 GitHub</a
-            >
-          </div>
-        </div>
 
-        <div class="project-card" data-label="">
-          <h4 data-i18n="projectLifeDashboardTitle">Life Dashboard Web App</h4>
-          <p data-i18n="projectLifeDashboardDescription">
-            A modular productivity application built with HTML, CSS, and
-            JavaScript. It features six interactive tools—tasks, goals, notes,
-            habits, progress, and budget—designed to help organize daily life in
-            one clean, user-friendly interface.
+          <p>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span data-i18n="emailAddress">Email: camylo182@gmail.com</span>
           </p>
-          <div class="project-links">
+          <p>
+            <i class="fa-brands fa-square-github" aria-hidden="true"></i>
+            <span data-i18n="gitHubProfile">GitHub Profile:</span>
             <a
-              href="https://richard-morales.github.io/life-dashboard/"
+              href="https://github.com/richard-morales"
               target="_blank"
-              data-i18n="liveDemo"
-              >🔗 Live Demo</a
+              rel="noopener"
+              >https://github.com/richard-morales</a
             >
-            <a
-              href="https://github.com/richard-morales/life-dashboard"
-              target="_blank"
-              data-i18n="github"
-              >💻 GitHub</a
-            >
-          </div>
-        </div>
-
-        <div class="project-card coming-soon" data-label="Coming Soon!">
-          <h4 data-i18n="projectWeatherTitle">Weather Dashboard</h4>
-          <p data-i18n="projectWeatherDescription">
-            An interactive app that fetches real-time data from the
-            OpenWeatherMap API. Built with async/await, error handling, and a
-            responsive design to display weather updates clearly.
           </p>
-          <div class="project-links">
-            <a href="#" target="_blank" data-i18n="liveDemo">🔗 Live Demo</a>
-            <a href="#" target="_blank" data-i18n="github">💻 GitHub</a>
-          </div>
+          <p>
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            <span data-i18n="linkedInProfile">LinkedIn Profile:</span>
+            <a
+              href="https://www.linkedin.com/in/richard-morales-335691205/"
+              target="_blank"
+              rel="noopener"
+              >https://www.linkedin.com/in/richard-morales-335691205/</a
+            >
+          </p>
+
+          <footer class="footer-credit" data-i18n="footerLine">
+            © 2025 Richard Camilo Morales — Designed with heart, built with
+            code.
+          </footer>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="contact-wrapper">
-        <h2 data-i18n="contactTitle">Contact</h2>
-        <img src="" />
-        <p class="message" data-i18n="contactParagraph">
-          I’m a frontend developer with a strong foundation in JavaScript and a
-          good eye for clean, user-focused design. I enjoy building projects
-          that are both functional and thoughtful. I'm open to new opportunities
-          — remote or onsite — and always happy to connect with people building
-          great things.
-        </p>
-
-        <p>
-          <i class="fa fa-envelope"></i>
-          <span data-i18n="emailAddress">Email: camylo182@gmail.com</span>
-        </p>
-        <p>
-          <i class="fa-brands fa-square-github"></i>
-          <span data-i18n="gitHubProfile">GitHub Profile:</span>
-          <a href="https://github.com/richard-morales" target="_blank"
-            >https://github.com/richard-morales</a
-          >
-        </p>
-        <p>
-          <i class="fa-brands fa-linkedin"></i>
-          <span data-i18n="linkedInProfile">LinkedIn Profile:</span>
-          <a
-            href="https://www.linkedin.com/in/richard-morales-335691205/"
-            target="_blank"
-            >https://www.linkedin.com/in/richard-morales-335691205/</a
-          >
-        </p>
-
-        <!-- Footer -->
-        <footer class="footer-credit" data-i18n="footerLine">
-          © 2025 Richard Camilo Morales — Designed with heart, built with code.
-        </footer>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Back To Top Button -->
-    <button id="backToTop" title="Go to top">
-      <i class="fa-solid fa-arrow-up"></i>
+    <button id="backToTop" title="Go to top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
     </button>
 
     <script src="script.js"></script>
