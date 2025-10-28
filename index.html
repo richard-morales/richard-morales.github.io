@@ -208,24 +208,112 @@
 
         <div class="about-extra">
           <h3 data-i18n="technologiesUsedTitle">Technologies I Use</h3>
-          <div class="tech-icons" aria-label="Technology logos">
-            <img src="icons/html5.svg" alt="HTML5" />
-            <img src="icons/css3.svg" alt="CSS3" />
-            <img src="icons/javascript.svg" alt="JavaScript" />
-            <img src="icons/git.svg" alt="Git" />
-            <img src="icons/vscode.svg" alt="Visual Studio Code" />
-          </div>
 
-          <p class="quote" data-i18n="inspirationalQuote">
-            If it doesn't look amazing and work smoothly, it's not finished yet.
-          </p>
+          <!-- TECH ICONS STRIP -->
+          <ul class="tech-icons" aria-label="Technology logos" role="list">
+            <li>
+              <img
+                src="icons/tech/nextjs-original.svg"
+                alt="Next.js"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="icons/tech/typescript-original.svg"
+                alt="TypeScript"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="icons/tech/react-original.svg"
+                alt="React"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="icons/tech/nodejs-original.svg"
+                alt="Node.js"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="icons/tech/tailwindcss-original.svg"
+                alt="Tailwind CSS"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="icons/tech/prisma-original.svg"
+                alt="Prisma ORM"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="icons/tech/postgresql-original.svg"
+                alt="PostgreSQL"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="icons/tech/vercel-original.svg"
+                alt="Vercel"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="icons/tech/javascript-original.svg"
+                alt="JavaScript"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img src="icons/tech/git-original.svg" alt="Git" loading="lazy" />
+            </li>
+            <li>
+              <img
+                src="icons/tech/github-original.svg"
+                alt="GitHub"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="icons/tech/vscode-original.svg"
+                alt="Visual Studio Code"
+                loading="lazy"
+              />
+            </li>
+          </ul>
+
+          <div class="quote-card">
+            <i class="fa-solid fa-quote-left"></i>
+            <p data-i18n="inspirationalQuote">
+              If it doesn't look amazing and work smoothly, it's not finished
+              yet.
+            </p>
+          </div>
 
           <!-- Featured Projects -->
           <section
             id="featured-projects-container"
             aria-labelledby="featured-title"
           >
-            <h3 id="featured-title" class="sr-only">Featured Projects</h3>
+            <!-- VISIBLE + TRANSLATABLE SUBTITLE -->
+            <h3
+              id="featured-title"
+              class="section-subtitle"
+              data-i18n="featuredProjectsTitle"
+            >
+              Featured Projects
+            </h3>
 
             <article class="featured-project">
               <h4 data-i18n="featuredProjectOneTitle">
@@ -285,6 +373,7 @@
             </article>
           </section>
 
+          <!-- YouTube embed (kept as requested) -->
           <div class="about-extra-video">
             <iframe
               width="100%"
