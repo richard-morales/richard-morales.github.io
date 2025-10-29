@@ -436,6 +436,48 @@ body {
   opacity: 0.75;
 }
 
+/* Fancy underline variant for section subtitles */
+.section-subtitle.fancy {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+
+/* Stronger but subtle underline bar */
+.section-subtitle.fancy::after {
+  bottom: -10px; /* a bit more breathing room */
+  height: 4px; /* slightly thicker for polish */
+  width: 140px; /* fixed width for a premium feel */
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 123, 255, 0.35) 18%,
+    rgba(0, 123, 255, 0.85) 50%,
+    rgba(0, 123, 255, 0.35) 82%,
+    transparent 100%
+  );
+  opacity: 1;
+}
+
+/* Soft glow under the line for depth (very subtle) */
+.section-subtitle.fancy::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -18px;
+  width: 80px;
+  height: 10px;
+  filter: blur(10px);
+  background: radial-gradient(
+    closest-side,
+    rgba(0, 123, 255, 0.18),
+    transparent
+  );
+  pointer-events: none;
+}
+
 .about-extra-video {
   position: relative;
   margin-top: 2rem;
