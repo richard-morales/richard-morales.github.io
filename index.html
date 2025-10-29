@@ -38,7 +38,7 @@
     />
     <link rel="icon" type="image/png" href="favicon.png" />
 
-    <!-- Open Graph (share cards) — unified to Full-Stack brand -->
+    <!-- Open Graph -->
     <meta
       property="og:title"
       content="Richard Morales — Full-Stack JavaScript Developer"
@@ -105,7 +105,6 @@
             <a href="#projects" class="projects-button" data-i18n="viewProjects"
               >View Projects</a
             >
-            <!-- NOTE: keep the link even if resume is not present; replace when ready -->
             <a
               href="resume.pdf"
               target="_blank"
@@ -129,7 +128,6 @@
       <section id="about" aria-labelledby="about-title">
         <div class="about-me">
           <h2 id="about-title" data-i18n="aboutMeTitle">About Me</h2>
-          <!-- Text comes from i18n (script.js) -->
           <p data-i18n="aboutMeParagraph"></p>
 
           <!-- Frontend Development -->
@@ -209,7 +207,6 @@
         <div class="about-extra">
           <h3 data-i18n="technologiesUsedTitle">Technologies I Use</h3>
 
-          <!-- TECH ICONS STRIP -->
           <ul class="tech-icons" aria-label="Technology logos" role="list">
             <li>
               <img
@@ -306,14 +303,7 @@
             id="featured-projects-container"
             aria-labelledby="featured-title"
           >
-            <!-- VISIBLE + TRANSLATABLE SUBTITLE -->
-            <h3
-              id="featured-title"
-              class="section-subtitle"
-              data-i18n="featuredProjectsTitle"
-            >
-              Featured Projects
-            </h3>
+            <h3 id="featured-title" class="sr-only">Featured Projects</h3>
 
             <article class="featured-project">
               <h4 data-i18n="featuredProjectOneTitle">
@@ -373,7 +363,7 @@
             </article>
           </section>
 
-          <!-- YouTube embed (kept as requested) -->
+          <!-- YouTube embed -->
           <div class="about-extra-video">
             <iframe
               width="100%"
@@ -396,7 +386,7 @@
         </p>
 
         <div class="projects-grid">
-          <!-- Card 1: Tolaris Crown -->
+          <!-- Card 1 -->
           <article class="project-card">
             <figure class="project-media">
               <img
@@ -407,7 +397,6 @@
                 height="675"
               />
             </figure>
-
             <h4 data-i18n="projectTolarisTitle">
               Tolaris Crown — Full-Stack Hotel Showcase
             </h4>
@@ -435,7 +424,7 @@
             </div>
           </article>
 
-          <!-- Card 2: Frontera Desk (In Progress) -->
+          <!-- Card 2 -->
           <article class="project-card coming-soon" data-label="Coming Soon!">
             <figure class="project-media">
               <img
@@ -446,7 +435,6 @@
                 height="675"
               />
             </figure>
-
             <h4 data-i18n="projectFronteraTitle">
               Frontera Desk — Business Control Desk
             </h4>
@@ -467,7 +455,7 @@
             </div>
           </article>
 
-          <!-- Card 3: Life Dashboard -->
+          <!-- Card 3 -->
           <article class="project-card">
             <figure class="project-media">
               <img
@@ -478,7 +466,6 @@
                 height="675"
               />
             </figure>
-
             <h4 data-i18n="projectLifeDashboardTitle">
               Life Dashboard Web App
             </h4>
@@ -506,7 +493,7 @@
             </div>
           </article>
 
-          <!-- Card 4: Portfolio -->
+          <!-- Card 4 -->
           <article class="project-card">
             <figure class="project-media">
               <img
@@ -517,7 +504,6 @@
                 height="675"
               />
             </figure>
-
             <h4 data-i18n="projectPortfolioTitle">
               Responsive Portfolio Website
             </h4>
@@ -551,7 +537,6 @@
       <section id="contact" aria-labelledby="contact-title">
         <div class="contact-wrapper">
           <h2 id="contact-title" data-i18n="contactTitle">Contact</h2>
-
           <p class="message" data-i18n="contactParagraph">
             I’m a frontend developer with a strong foundation in JavaScript and
             a good eye for clean, user-focused design. I enjoy building projects
@@ -584,14 +569,73 @@
               >https://www.linkedin.com/in/richard-morales-335691205/</a
             >
           </p>
-
-          <footer class="footer-credit" data-i18n="footerLine">
-            © 2025 Richard Camilo Morales — Designed with heart, built with
-            code.
-          </footer>
         </div>
       </section>
     </main>
+
+    <!-- Portfolio Footer -->
+    <footer id="site-footer" role="contentinfo" aria-label="Site footer">
+      <!-- Curved top divider -->
+      <div class="footer-curve" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+          <path
+            d="M0,64 C360,0 1080,0 1440,64 L1440,80 L0,80 Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+
+      <!-- Footer background -->
+      <div class="footer-bg">
+        <!-- Edge-aligned top separator line -->
+        <div class="footer-top-line" aria-hidden="true"></div>
+
+        <!-- Decorative glow texture -->
+        <div class="footer-texture" aria-hidden="true"></div>
+
+        <div class="footer-inner">
+          <!-- Logo -->
+          <div class="footer-logo">
+            <img
+              src="images/Richard-Morales-Logo.png"
+              alt="Richard Morales — Full-Stack Developer"
+              width="360"
+              height="90"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Slogan -->
+          <p class="footer-slogan">
+            <span>Richard Morales</span> — full-stack solutions for real
+            businesses.
+          </p>
+
+          <!-- Divider -->
+          <div class="footer-divider" aria-hidden="true"></div>
+
+          <!-- Links -->
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="#about" data-i18n="navAbout">About</a>
+            <a href="#contact" data-i18n="navContact">Contact</a>
+            <a
+              href="https://github.com/richard-morales"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+          </nav>
+
+          <!-- Copyright -->
+          <p class="footer-copy">
+            © <span id="year"></span> Richard Morales. All rights reserved.
+          </p>
+        </div>
+
+        <!-- Bottom glow -->
+        <div class="footer-bottom-glow" aria-hidden="true"></div>
+      </div>
+    </footer>
 
     <!-- Back To Top Button -->
     <button id="backToTop" title="Go to top" aria-label="Back to top">
@@ -599,5 +643,8 @@
     </button>
 
     <script src="script.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
